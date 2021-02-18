@@ -4,6 +4,7 @@
 <ng-container *ngIf="(data$ | async) as data">
   <app-tickets [tickets]='data[1]'></app-tickets>
   <app-sponsors [sponsors]='data[0]'></app-sponsors>
+  <app-community-partners [communityPartners]='data[2]'></app-community-partners>
 </ng-container>
 
 <!--<app-gallery></app-gallery> -->

@@ -6,6 +6,7 @@ import { SponsorsService } from 'src/app/core/services/sponsors.service';
 import { groupBy } from 'lodash-es';
 
 import { map } from 'rxjs/operators';
+import { CommunityPartnersService } from 'src/app/core/services/community-partners.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -17,7 +18,8 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private sponsorsService: SponsorsService,
-    private ticketsService: TicketsService
+    private ticketsService: TicketsService,
+    private communityPartnersService: CommunityPartnersService,
   ) {
     this.sponsors$ = this.sponsorsService
       .getSponsors()
@@ -27,7 +29,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.data$ = combineLatest([
       this.sponsors$,
-      this.ticketsService.getTickets()
+      this.ticketsService.getTickets(),
+      this.communityPartnersService.getCommunityPartners()
     ]);
   }
 }
