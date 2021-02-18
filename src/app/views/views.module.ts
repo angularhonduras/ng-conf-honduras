@@ -20,11 +20,19 @@ import { BronzeSponsorsComponent } from './components/bronze-sponsors/bronze-spo
 import { TicketsComponent } from './components/tickets/tickets.component';
 import { TicketCardComponent } from './components/ticket-card/ticket-card.component';
 import { TicketMostPopularCardComponent } from './components/ticket-most-popular-card/ticket-most-popular-card.component';
-
+import { CommunityPartnersComponent } from './components/community-partners/community-partners.component';
 
 @NgModule({
-  declarations: [SpeakersComponent, SponsorsComponent, HomeComponent,
-    HeroHeaderComponent, TeamComponent, TeamMemberComponent, SpeakerCardComponent, GalleryComponent, AboutComponent,
+  declarations: [
+    SpeakersComponent,
+    SponsorsComponent,
+    HomeComponent,
+    HeroHeaderComponent,
+    TeamComponent,
+    TeamMemberComponent,
+    SpeakerCardComponent,
+    GalleryComponent,
+    AboutComponent,
     PlatinumSponsorsComponent,
     GoldSponsorsComponent,
     SilverSponsorsComponent,
@@ -32,11 +40,9 @@ import { TicketMostPopularCardComponent } from './components/ticket-most-popular
     BronzeSponsorsComponent,
     TicketsComponent,
     TicketCardComponent,
-    TicketMostPopularCardComponent],
-  imports: [
-    CommonModule,
-    ViewsRoutingModule,
-    FontAwesomeModule
-  ]
+    TicketMostPopularCardComponent,
+    CommunityPartnersComponent,
+  ],
+  imports: [CommonModule, ViewsRoutingModule, FontAwesomeModule],
 })
-export class ViewsModule { }
+export class ViewsModule {}
