@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # NgConfHonduras
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
@@ -28,5 +27,5 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 =======
 # ng-conf-honduras-
-NG Conf Honduras Website
->>>>>>> 48baf9c0b1e8af4f7313464922f6507660d4df4d
+NG Conf Honduras Website [here](https://ng-honduras.org/)
+
