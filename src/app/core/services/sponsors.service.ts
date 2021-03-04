@@ -12,7 +12,7 @@ export class SponsorsService {
   constructor(private afs: AngularFirestore) { }
 
   getSponsors(): Observable<ISponsor[]>{
-    return this.afs.collection('sponsors', ref =>   ref.where('active', '==', true).orderBy('order'))
+    return this.afs.collection('sponsors', ref => ref.where('active', '==', true).orderBy('order'))
     .valueChanges().pipe(
       map(docs => docs as ISponsor[])
     );
