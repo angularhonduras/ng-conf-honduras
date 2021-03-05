@@ -22,8 +22,8 @@ import { TicketCardComponent } from './components/ticket-card/ticket-card.compon
 import { TicketMostPopularCardComponent } from './components/ticket-most-popular-card/ticket-most-popular-card.component';
 import { CommunityPartnersComponent } from './components/community-partners/community-partners.component';
 import { CalendarComponent } from './components/calendar/calendar.component';
-import { DaysComponent } from './components/days/days.component';
 import { WorkshopsComponent } from './components/workshops/workshops.component';
+import { TalksComponent } from './components/talks/talks.component';
 
 @NgModule({
   declarations: [
@@ -46,8 +46,8 @@ import { WorkshopsComponent } from './components/workshops/workshops.component';
     TicketMostPopularCardComponent,
     CommunityPartnersComponent,
     CalendarComponent,
-    DaysComponent,
     WorkshopsComponent,
+    TalksComponent,
   ],
   imports: [CommonModule, ViewsRoutingModule, FontAwesomeModule],
 })

@@ -1,13 +1,12 @@
 <div class="container mt-8 mx-auto flex flex-col justify-center">
 <h1 class="text-4xl text-black font-medium text-center">Calendar</h1>
   <div>
-    <app-workshops></app-workshops>
-    <!--[workshop]="" -->
+    <app-workshops [workshop]="workshop"></app-workshops>
   </div>
 
   <div>
-    <app-days></app-days>
-    <!--[days]="" -->
+    <app-talks [talk]="talk"></app-talks>
   </div>
+
 
 </div>
