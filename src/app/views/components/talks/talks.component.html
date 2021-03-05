@@ -1,0 +1,60 @@
+<div class="container mt-8 mx-auto flex flex-col justify-center">
+  <h2 class="font-normal text-blueGray-900 text-2xl">Talks:</h2>
+ <!-- <div class="bg-white">
+    <nav class="flex flex-col sm:flex-row">
+      <button
+        class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"
+        [ngClass]="{
+          'text-blue-500 border-b-2 font-medium border-blue-500': active === 1
+        }"
+        (click)="tabChange(1)"
+      >
+        Fase 1
+      </button>
+      <button
+        class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"
+        [ngClass]="{
+          'text-blue-500 border-b-2 font-medium border-blue-500': active === 2
+        }"
+        (click)="tabChange(2)"
+      >
+        Fase 2
+      </button>
+      <button
+        class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"
+        [ngClass]="{
+          'text-blue-500 border-b-2 font-medium border-blue-500': active === 3
+        }"
+        (click)="tabChange(3)"
+      >
+        Fase 3
+      </button>
+      <button
+        class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none"
+        [ngClass]="{
+          'text-blue-500 border-b-2 font-medium border-blue-500': active === 4
+        }"
+        (click)="tabChange(4)"
+      >
+        Fase 4
+      </button>
+    </nav> 
+  </div> -->
+  <ng-container *ngFor="let talks of talk">
+    <ul class="flex flex-col p-4">
+      <li class="border-gray-400 flex flex-row">
+        <div class="custom select-none flex flex-1 items-center p-4 transition duration-500 ease-in-out transform hover:-translate-y-2 rounded-2xl border-2 p-6 hover:shadow-2xl border-blue-400">
+          <div class="sm:w-1/3 w-1/4 sm:h-4/6 h-3/4 text-wrap text-center flex text-white text-bold flex-col rounded-md bg-blue-700 justify-center items-center mr-10 p-2">
+            {{ talks.time }}
+          </div>
+          <div class="flex pl-1">
+            <div class="font-medium text-blue-500">
+              {{ talks.title }}
+              <h5 class="text-pink-500">{{ talks.speaker }}</h5>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </ng-container>
+</div>

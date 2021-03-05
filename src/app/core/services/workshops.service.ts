@@ -11,9 +11,11 @@ export class WorkshopsService {
   constructor(private afs: AngularFirestore) {}
 
   getWorkshops(): Observable<IWorkshop[]> {
-    return this.afs.collection('workshops', ref =>   ref.where('active', '==', true).orderBy('order'))
-    .valueChanges().pipe(
-      map(docs => docs as IWorkshop[])
-    );
+    return this.afs
+      .collection('workshops', (ref) =>
+        ref.where('active', '==', true).orderBy('order')
+      )
+      .valueChanges() 
+      .pipe(map((docs) => docs as IWorkshop[]));
   }
 }

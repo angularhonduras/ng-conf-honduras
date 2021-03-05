@@ -1,13 +1,18 @@
-import { TicketsService } from './../../../core/services/tickets.service';
-import { ISponsor } from './../../../core/models/sponsor.interface';
 import { Observable, combineLatest } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
-import { SponsorsService } from 'src/app/core/services/sponsors.service';
 import { groupBy } from 'lodash-es';
-
 import { map } from 'rxjs/operators';
+
+// Services
 import { CommunityPartnersService } from 'src/app/core/services/community-partners.service';
+import { TalksService } from 'src/app/core/services/talks.service';
+import { TicketsService } from './../../../core/services/tickets.service';
+import { SponsorsService } from 'src/app/core/services/sponsors.service';
 import { WorkshopsService } from 'src/app/core/services/workshops.service';
+
+// Models 
+import { ISponsor } from './../../../core/models/sponsor.interface';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -18,10 +23,11 @@ export class HomeComponent implements OnInit {
   public data$: Observable<any>;
 
   constructor(
-    private sponsorsService: SponsorsService,
+    private communityPartnersService: CommunityPartnersService,
+    private talkService: TalksService,
     private ticketsService: TicketsService,
-    private workshopService: WorkshopsService,
-    private communityPartnersService: CommunityPartnersService
+    private sponsorsService: SponsorsService,
+    private workshopService: WorkshopsService
   ) {
     this.sponsors$ = this.sponsorsService
       .getSponsors()
@@ -34,8 +40,7 @@ export class HomeComponent implements OnInit {
       this.ticketsService.getTickets(),
       this.communityPartnersService.getCommunityPartners(),
       this.workshopService.getWorkshops(),
+      this.talkService.getTalks(),
     ]);
-
-    console.log(this.workshopService.getWorkshops());
   }
 }
